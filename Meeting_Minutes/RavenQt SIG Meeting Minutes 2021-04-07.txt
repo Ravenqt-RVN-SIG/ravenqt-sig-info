@@ -1,0 +1,83 @@
+
+RavenQt SIG Meeting Minutes 2021-04-07
+======================================
+
+This was the first meeting of the raven-qt SIG. It was a very busy and productive meeting.
+
+Policies and Procedures:
+
+1) Branch definitions and purposes
+
+- all new code is put into develop branch
+	-develop branch is to be used only on testnet
+	-set BIP9 activation at 60%
+- feature branches are created as needed, then merged into develop
+- merge to master for releases and tagging there
+	-master branch is "pre-release"
+	-people should feel confident in building from master and using on mainnet
+	-releases are a separate manual process which includes signing
+
+2) Merge/Commit rules
+
+Current Rules:
+a) PRs require 2 approvals
+b) PRs must build cleanly
+c) PR submitter cannot approve their own PR
+	-this was discussed and it was agreed that for non-consensus-related PRs, a PR author could approve their own PR if another trusted and active dev (who does not have github write auhority) also explicitly recorded his approval in the comments. This is needed because we have only 2 active devs with github write authority at this time.
+
+-some new features (esp consensus changes) will take longer to test than others
+	-there will be a 2 week minimum test time before moving develop branch code to master
+-The standard for inclusion into develop versus master should be different
+	-how to handle this related to merges from develop into master- always "bulk" or feature-by-feature?
+		-there was agreement that commits will be "cherry picked" from develop into master, not bulk merged
+	-how do we decide what/when/approvals for merges from develop into master?
+		-we will implement a "Two required approvals" rule just as we do for new code submissions. We could use the github PR system or document it elsewhere
+	-it was pointed out that consensus-related code should have a very high standard for required review even when merging into the develop branch because projects often decide to "do it later" when merging into master, but then pay too little attention at that step also
+
+3) Default testnet/mainnet rules by branch
+	-Hans's proposal was discussed in which code on the develop branch should default to testnet, and require a -mainnet CLI switch to use mainnet. Code on the master branch would continue to operate as it does now (default to mainnet and require -testnet to use testnet).
+	-Other members did not feel as strongly as Hans but agreed that such functionality was safer
+	-We agreed that this behavior will be easy to maintain since we will be cherry picking commits from develop into master rather than bulk merging
+
+
+4) Build policy
+	-which branches?
+		-we will auto-build on both master and develop branches
+	-how often? every commit?
+		-Yes
+	-OSX
+		-For legal reasons, OSX had to be removed from the auto-build "Actions" system, but we now also have a semi-automated docker-based OSX build system similar to what bitcoin uses (thanks fdov)
+		-From now on, Mac OSX builds will only be done occasionally using the manual process. Other platforms will be automatic with every merge.
+		-Tron has turned off the check requrement for successful OSX build as we requested
+
+5) When to treat a change as "clean" and merge from develop to master for pre-release?
+	-as stated earlier, we will implement a "Two required approvals" rule just as we do for new code submissions. We could use the github PR system or document it elsewhere
+
+6) Do we want "auto-merge"?
+	-it was agreed that we do NOT want the auto-merge feature turned on. We prefer manual. Also, we often want to squash before merging
+
+7) Cleaning up old branches
+	-it was agreed that after we are done processing the open PRs and Issues, we will do a review of old branches and delete unnecessary ones
+	-after that, a clean-up will be performed after each new public release to select which old branches to delete
+
+8) Specific PRs & Commits to Approve or Merge
+	-fdov has done extensive work recoding the auto-build system including updating all old-rev dependencies
+	-we have re-targetted all the PRs to develop which were previously targetted to master and updated any stale branches
+	-some PRs are failing because PR authors have enabled AWS functionality on their account but their AWS keys are invalid. We need to remove all AWS related code from the yaml auto-build "Actions" scripts
+
+Other:
+	-fdov wanted to stress that github Issues needed to be cleaned up asap and that in the future we need to respond to Issues entries quickly. He emphasized that he himself uses Issues response time as a measure of the quality of a project and its dev team.
+	-We discussed the next public binary release of raven-qt and agreed that it should be soon and should include all new features and GUI improvements EXCEPT P2SH. We want something soon to restore confidence and visibility for the project. We also want a release which will prove our release procedures including signing the binaries, without doing a chain fork at the same time.
+
+
+
+
+
+
+
+
+
+
+
+
+
