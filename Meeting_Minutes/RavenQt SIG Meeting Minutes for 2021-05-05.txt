@@ -1,0 +1,35 @@
+
+RavenQt SIG Meeting Minutes for 2021-05-05:
+==========================================
+
+V4.7test1 has been released for Testnet and P2SH has activated.
+
+1) Discussion of things to do for testing of V4.7test1
+
+2) Discussion of things needed in preparation for mainnet release
+
+3) More general plans
+
+
+Testnet Testing
+----------------
+The following are items which we agreed need to be tested on Testnet before considering the testing sufficient:
+	-multisig
+	-test cross-chain atomic swap
+	-Sweep
+
+
+-We agreed that since the current P2SH code has problems with non-standard transactions, we will not test those yet. We don't want to risk creating sync problems on testnet like those currently on mainnet. After the P2SH code is revised, we will do non-standard transaction testing including do opcode padding.
+
+-We discussed the current mining situation on Testnet. Currently HyperPeek is the only one mining testnet, and he is dong so with 12MH using V4.3.2.1. We had asked him to continue doing so in order for us to see the forking more clearly when P2SH transactions are encountered. We were under the impression that miners would continue to mine on Jeroz's v4.7test1 pool. The pool is up, but nobody is using it. It looks like so far nobody has done a P2SH and we have been too busy to do so. 
+-Hans will check with Jeroz to see if it is possible to coordinate making sure that there is a sustained 3050-MH of mining using V4.7test.
+
+
+Mainnet Release
+---------------
+-We discussed once more our strategy for a mainnet release. It really depends on the quality of the testing exerience on Testnet as well as the timing for the new P2SH code revision. If too little testing occurs on Testnet to our satisfaction, we might consider releasing for mainnet without P2SH merged. At least then we could have more active testing on the other 70+ PRs which were merged.
+
+-We still need to establish the Binary-Signing procedure before mainnet release. This needs to be coordingated with the Foundation. This topic should be raised for discussion during the Friday meeting.
+
+-We discussed which additional PRs may be appropriate to add to a mainnet release. Ideally, it would be very few. But documentation changes and translations should be ok. Since we will be doing another revision of the P2SH code, there may be an opporunity to put in some PRs at that time on Testnet as well.
+

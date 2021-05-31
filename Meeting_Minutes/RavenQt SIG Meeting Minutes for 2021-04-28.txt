@@ -1,0 +1,44 @@
+
+
+RavenQt SIG Meeting Minutes for 2021-04-28:
+==========================================
+
+We are very close to the testnet release. So today's agenda will focus on that:
+
+1) Discussion of things left to do before the testnet release
+
+2) Discussion of release plans and schedules
+
+3) Future plans
+
+-We agreed that Testnet BIP9 parameters would be set at 70% (not 60% as discussed earlier)
+
+-We agreed that although mainnet should not add additional PRs after testnet testing, there should be some exceptions, especially for documetation and translation. 
+
+-We discussed a release plan similar to that used by bitcoin, which includes string freeze times to allow for language translations, and also Release Candidates:
+	Release schedule start with a soft string-freeze. 
+	+2 weeks: feature freeze and hard string freeze.
+	testnet - 4.7
+	+2 weeks: split into release branch, rc1 is tagged and released.
+	+4 weeks: release.
+
+-We re-opened the possibility that we may want to do a mainnet release which does not include P2SH due to current P2SH problems.
+-The new version of raven-qt V4.7test1 cannot currently be used on mainnet. Mainnet contains some non-standard transactions which look like P2SH but have additional Op_0 opcodes inserted to pad the ScriptOubKey. That transactions cause node sync to fail.
+-The P2SH code will need to be revised again and tested on both testnet and mainnet before release
+
+-We discussed the version numbering for the mainnet release
+-We decided that it should be >=v4.8 and <v5.0. This is because there are many scam wallets being pushed by hackers, and most of them are claiming to be v4.4
+
+-We agreed that when we are ready for mainnet release, master should ideally be a complete merge/rebase from develop, not cherry picking
+
+-We agreed that in the future, for "official" mainnet releases, they will be hosted on RavenProject
+-For testnet releases, they will be hosted on the SIG website. But they will include hashes and GPG signatures for verification.
+
+-We agreen that the tesnet release will include all PR's currently outstanding
+
+-Schedule: Merge P2SH tomorrow; so builds on Thursday evening; Set BIP9 start date to Sunday 18:00 UTC
+
+-Hans agreed to start writing the Release Notes for the new version node
+
+-We agreed that the name of the downloads would include the word "test" to make clear that it is for testnet. 
+

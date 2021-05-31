@@ -1,0 +1,113 @@
+%PDF-1.1
+1 0 obj
+<<
+/CreationDate (D:20210526202505)
+/Producer (text2pdf v1.1 (\251 Phil Smith, 1996))
+/Title (RavenQt SIG Meeting Minutes for 2021-05-26.txt)
+>>
+endobj
+2 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Courier
+>>
+endobj
+5 0 obj
+<<
+  /Font << /F1 4 0 R >>
+  /ProcSet [ /PDF /Text ]
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 8 0 R
+>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 572 Tm
+12 TL
+()'
+(RavenQt SIG Meeting Minutes for 2021-05-26:)'
+(==========================================)'
+()'
+(1\) Discussion of current repo status)'
+()'
+(2\) Discussion of remaining tests needed)'
+()'
+(3\) Review of near-term plans)'
+()'
+(4\) Other)'
+()'
+(=====================================================)'
+()'
+(P2SH discussion)'
+(        -there appears to be some difference between the error message given by raven-qt v4.3.2.1 and the error mess)'
+(age given by v4.7PR#1019 when attempting to do a P2SH asset operation pre-BIP9-deployment)'
+(        -it will happen only pre-BIP9)'
+(        -we discussed changing the error message, but agreed not to do so)'
+(        -the P2SH code patch in PR#1019 continues to look like it may be the final patch before P2SH merging)'
+()'
+(Signing of binaries:)'
+(        -we need to begin preparing for signing binaries for the next "official" mainnet release)'
+(        -HyperPeek reported that Tron informed that the Foundation cannot use the credentials used by Medici for pre)'
+(vious release signings.)'
+(        -this needs to be verified)'
+(        -if true, then we need the Foundation asap to apply for new signing credentials for Windows and Apple Mac)'
+()'
+(Messaging:)'
+(        -We discussed briefly the requests to implement messaging in the raven-qt GUI)'
+(        -implementation is complicated by the fact that good messaging support would include anti-spam, history, etc)'
+(.)'
+(        -some of these messaging topics are discussed in the repo files "Ravencoin/roadmap/messaging/README.md" and )'
+("Ravencoin/roadmap/messaging-antispam/README.md")'
+()'
+(Atomic Swap:)'
+(        -We discussed briefly that since Electrum and raven-qt are about to become up-to-date with full asset suppor)'
+(t, it is worth beginning discussions for where an atomic swap application should be best supported: An RPC-based app)'
+(lication which works with raven-qt, an add-on application which works with Electrum, integrated into Electrum, a web)'
+( page, etc.)'
+()'
+()'
+()'
+ET
+endstream
+endobj
+8 0 obj
+2052
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Count 1
+/MediaBox [ 0 0 792 612 ]
+/Kids [ 6 0 R ]
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 0000000009 00000 n 0000000169 00000 n 0000002571 00000 n 0000000218 00000 n 0000000296 00000 n 0000000367 00000 n 0000000447 00000 n 0000002551 00000 n trailer
+<<
+/Size 9
+/Root 2 0 R
+/Info 1 0 R
+>>
+startxref
+2656
+%%EOF

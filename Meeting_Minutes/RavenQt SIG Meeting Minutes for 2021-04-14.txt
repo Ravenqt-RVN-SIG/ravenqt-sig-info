@@ -1,0 +1,68 @@
+
+
+RavenQt SIG Meeting Minutes for 2021-04-14:
+==========================================
+
+1) Discussion of PR processing methodology
+	-How much to do by local-edit/branch-force vs the github GUI
+	-How do we handle approval rules if we bypass the GUI
+	-Are we bypassing build check rules by bypassing the GUI
+
+	-The strategy of using squash-merge locally and then force-push to remote is working well to efficiently process the large backlog of PRs and give us a very clean PR-centric git history. We are doing this on the develop-sig branch which we created in order to side-step the force-push-prevention-protection on develop branch. 
+	-However, this technique also side-steps all the controls built into the GUI including the requirement for two authorized approvals and for a clean build before merge. While using the force-push technique, we need to manually enforce those rules, which we are doing.
+	-For the security reason, we should view force-push as a one-time strategy to clear the PR backlog. After that, we should enable protection on the branch and go back to using the github GUI.
+
+	-After develop-sig branch is finished and verified, we plan to use it to replace develop (either force push develop-sig into develop or delete develop and rename develop-sig)
+
+	-Our planned strategy of cherry-picking from develop into master has problems similar to some we encountered already- often times, newer PRs are dependent on previous PRs. We need to re-examine using a merge strategy.The "Gitflow Workflow" described at "https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" appears to be a good fit for our needs.
+
+
+2) Authorization issues- current roadblocks and plans
+
+	-We are confident that we will resolve this issue with Tron 
+
+	-We have run into three issues for which we wanted admin authority:
+
+		1) Turning off the "Require branches to be up to date before merging" option which forces every one of the PRs to rerun the build pipeline after any PR merge. This makes merging extremely slow due to a huge number of builds. We can by-pass security by doing a forced push onto a new develop-sig branch (which we are doing) instead of using develop.
+
+		3) Current branch protection rules do not permit us to squash and merge. Squash helps to clean up history since it has become a mess. Not having squash also complicates cherry-picking commits from develop to master since a PR can have many commits scattered through the git history and it is difficult to find and select the correct ones.
+
+		4) We need to block github user "alisscco" who has been spamming PRs for the last few weeks with useless comments. See the latest comments on PR#845 and all of PR#921
+
+
+3) Current build status and issues
+
+	-fdov had to fix a boost download location which was discontinued
+	-fdov is working on a new build process similar to one bitcoin is building to replace gitian. It will give deterministic binary builds.
+
+4) Specific PRs & Commits to Approve or Merge
+
+	-PR#869 failing binary security check
+		It was failing the test because PR#896 had not yet been merged. The fail had nothing to do with the qpixmap preview.
+		It was just coincidence that this PR failed. Any PR attemping to build at that time would have failed. It will pass now. 
+
+	-PR#922 vs PR#910
+		PR#910 had conflicts if merging into develop-sig
+		That is because 910 included 904, which makes 910 not appropriate for develop or develop-sig
+		922 replaces 910
+		PR910 should be deleted
+
+	-Delete PR#766. It was from >1 year ago about a Docker build using Azure, which we will not do
+
+	-Delete PR#921. It is a garbage PR created by a spammer.
+
+Other:
+
+	-After develop-2 is finished and verified, we will create a feature branch from it, into which we will merge P2SH. That will be used for the testnet release
+
+	-We need to remember to check (and adjust if needed) the Bip9 dates on P2SH after merging it
+
+	-Hans and HyperPeek need to set up GPG and start signing commits. fdov is already doing this
+
+	-We need to update and publicize the procedure for people to report security bugs. It currently says to contact BlondFrogs or Tron.
+
+
+
+
+
+

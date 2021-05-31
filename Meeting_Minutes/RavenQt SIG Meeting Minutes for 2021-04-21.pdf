@@ -1,0 +1,164 @@
+%PDF-1.1
+1 0 obj
+<<
+/CreationDate (D:20210422165418)
+/Producer (text2pdf v1.1 (\251 Phil Smith, 1996))
+/Title (RavenQt SIG Meeting Minutes for 2021-04-21.txt)
+>>
+endobj
+2 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Courier
+>>
+endobj
+5 0 obj
+<<
+  /Font << /F1 4 0 R >>
+  /ProcSet [ /PDF /Text ]
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 8 0 R
+>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 572 Tm
+12 TL
+()'
+(RavenQt SIG Meeting Minutes for 2021-04-21:)'
+(==========================================)'
+()'
+(1\) Discussion of current flow for approvals and commits)'
+(    -How much to do by local-git/push vs the github GUI?)'
+(    -Any remaining problems caused by lack of admin priviledge?)'
+()'
+(    -We have processed 34 Pull Requests as commits on branch develop since master)'
+(        -each of them went through code review by at least 2 people and successfully built)'
+(        -the git history is a clean linear history with one commit per PR)'
+()'
+(    -We had a short discussion of the advantages/disadvantages of using the github GUI vs git CLI)'
+(        -we agreed that we would enforce the desired result, rather than the methodology)'
+(        -we reiterated the PR rules:)'
+(            -at least 2-person approval \(not including the author\))'
+(            -must successfully build)'
+(            -minimum 1 week review period)'
+(        -but we agreed that those rules would be enforced manually, not by the GUI)'
+(        -in some cases the GUI is unpredictable or undesireable)'
+(        -we briefly discussed the "linear commits" setting but are unfamiliar with it)'
+(        -we briefly discussed the ability to revise historical commit messages but were unsure how github responded)'
+()'
+(    We discussed the fact that we still do not have admin privileges on RavenProject)'
+(        -this no longer limits our productivity)'
+(        -using branch creation, deletion, and renaming, we have been able to defeat all github security measures)'
+(        -we would like to be able to inspect and enable some security settings where appropriate)'
+(        -but since we don't have admin rights, we are forced to leave security open or whatever the default is)'
+(        -the Electrum SIG doesn't suffer this limitation since they own their github account, so they can set securi)'
+(ty optimally)'
+()'
+(    We need to update the documentation files in the repository to match our rules and procedures)'
+()'
+(    We discussed that prior to any mainnet release, there should be a 2 week "string freeze" period)'
+(        -during that period, volunteers can submit translations for other languages)'
+()'
+(2\) Discussion of testnet release & mainnet release plans)'
+(    -the new PRs)'
+(    -P2SH)'
+(    -expected schedule)'
+()'
+(    We currently have 11 unmerged PRs up to PR#944)'
+(        -we agreed that we plan to process all of these into the upcoming testnet release)'
+(            -this includes 5 large commits from bitcoin to update secp256k1 with the latest upstream changes)'
+(        -we agreed that we do not currently plan to update univalue due to possible merge issues caused by kaawpow)'
+ET
+endstream
+endobj
+8 0 obj
+2756
+endobj
+9 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources 5 0 R
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 11 0 R
+>>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 50 572 Tm
+12 TL
+()'
+(    We discussed the release plans again)'
+(        -we still plan to do a mainnet release \(post testnet testing\) fairly soon which does not contain P2SH)'
+(        -that will be followed by a 2nd mainnet release later which has P2SH)'
+(        -however, the 1st testnet release will actually contain all the code including P2SH)'
+(            -The BIP9 parameters will be set to enable testmet activation at 60%, but never on mainnet)'
+()'
+(3\) Discussion of build system status & issues)'
+()'
+(    Hans reported that the linux binaries built by the new build system do not function on Ubuntu 18 or older)'
+(        -an error "version `GLIBC_2.29' not found"/"version `GLIBC_2.28' not found" is generated)'
+()'
+(4\) Discussion of any specific PRs & Commits)'
+()'
+(    We discussed the list of https URLs which Hans extracted from PR922)'
+(        -these all came from the bitcoin dependency and patch updates + some openssl references)'
+(        -some of them are private github repositories)'
+(        -Hyperpeek reported that he looked at those and they looked trustworthy)'
+(        -fdov encouraged further review)'
+()'
+(    We discussed the updates to the autobuild system in the .github repo subdirectory)'
+(        -these did not come from bitcoin. they were alread part of the Ravencoin repo)'
+(        -fdov only updated the code to fix broken functionality)'
+(        -the code was added originally by Cade Call from Medici; not sure where he got it)'
+()'
+()'
+ET
+endstream
+endobj
+11 0 obj
+1518
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Count 2
+/MediaBox [ 0 0 792 612 ]
+/Kids [ 6 0 R 9 0 R ]
+>>
+endobj
+xref
+0 12
+0000000000 65535 f 0000000009 00000 n 0000000169 00000 n 0000004949 00000 n 0000000218 00000 n 0000000296 00000 n 0000000367 00000 n 0000000447 00000 n 0000003255 00000 n 0000003275 00000 n 0000003356 00000 n 0000004928 00000 n trailer
+<<
+/Size 12
+/Root 2 0 R
+/Info 1 0 R
+>>
+startxref
+5040
+%%EOF

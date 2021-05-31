@@ -1,0 +1,31 @@
+
+RavenQt SIG Meeting Minutes for 2021-05-19:
+==========================================
+
+1) Discussion of P2SH changes
+
+2) Discussion of remaining tests needed
+
+3) Review of near-term plans
+
+4) Other
+
+########################################################################
+
+
+-We discussed continued testing of the new raven-qt version which need to be done to verify functionality prior to final release. 
+	-fdov is maintaining a list of test items at:
+		https://github.com/fdoving/RavenStash/blob/main/testing-4.7.0test.md
+	and a pre-release todo list at:
+		https://github.com/fdoving/RavenStash/blob/main/tasks-4.7.0test.md
+
+-We briefly discussed the Sweep function. Hans agreed to attempt contacting the dev who wrote that function. Based on his response, we will decide whether or not Sweep will be included in the next official release.
+
+-We discussed processing the remaining PRs
+
+-After that, our top priority is to make changes on the RavenProject/Ravencoin repo so that master can work properly on mainnet, and develop can work properly on testnet. This is important because neither branch is currently usable, which is causing confusion and complaints. People are less familiar with finding the SIG github repo at https://github.com/Ravenqt-RVN-SIG
+
+-So the plan is:
+	-Revert P2SH on develop, Revert Sweep on develop, then merge to master, then reapply P2SH to develop (but not sweep)
+
+
