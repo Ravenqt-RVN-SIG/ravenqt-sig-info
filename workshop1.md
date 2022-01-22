@@ -20,7 +20,7 @@ _Goal: At the end of this workshop you should have a working development envirom
 2. Cloning git repository, forking on github.
 3. Editors/IDEs.
 4. Building the develop branch.
-5. Navigating the code.
+5. Navigating the directories of the code.
 
 
 
@@ -33,5 +33,6 @@ You can use a VM or your computer if you already have linux installed, up to you
 
 Useful links:
 https://github.com/RavenProject/Ravencoin/blob/develop/doc/build-ubuntu.md
+
 https://code.visualstudio.com/
 
