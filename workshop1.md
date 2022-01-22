@@ -28,10 +28,11 @@ _Goal: At the end of this workshop you should have a working development envirom
 
 Ubuntu or some other linux/freebsd installed before we begin.
 If you are starting from scratch, Ubuntu is preferred.
-You can use a VM or your computer if you already have linux installed, up to you.
+You can use a VM or your computer, if you already have linux installed, up to you.
 
 
-Useful links:
+
+## Useful links: ##
 
 https://github.com/RavenProject/Ravencoin/blob/develop/doc/build-ubuntu.md
 
