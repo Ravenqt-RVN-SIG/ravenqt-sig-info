@@ -32,6 +32,7 @@ You can use a VM or your computer if you already have linux installed, up to you
 
 
 Useful links:
+
 https://github.com/RavenProject/Ravencoin/blob/develop/doc/build-ubuntu.md
 
 https://code.visualstudio.com/
