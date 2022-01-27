@@ -38,3 +38,9 @@ https://github.com/RavenProject/Ravencoin/blob/develop/doc/build-ubuntu.md
 
 https://code.visualstudio.com/
 
+https://education.github.com/git-cheat-sheet-education.pdf
+
+https://github.com/RavenProject/Ravencoin/tree/develop/doc
+
+
+
