@@ -18,8 +18,8 @@ _Goal: At the end of this workshop you should have a working development envirom
 
 1. Installing Linux (Ubuntu) and the build dependencies.
 2. Cloning git repository, forking on github.
-3. Editors/IDEs.
-4. Building the develop branch.
+3. Building the develop branch.
+4. Editors/IDEs.
 5. Navigating the directories of the code.
 
 
